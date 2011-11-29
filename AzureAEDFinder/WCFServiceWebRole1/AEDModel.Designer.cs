@@ -68,28 +68,52 @@ namespace AzureAEDFinderWCFServiceWebRole
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<aed> aeds
+        public ObjectSet<AED> AEDs
         {
             get
             {
-                if ((_aeds == null))
+                if ((_AEDs == null))
                 {
-                    _aeds = base.CreateObjectSet<aed>("aeds");
+                    _AEDs = base.CreateObjectSet<AED>("AEDs");
                 }
-                return _aeds;
+                return _AEDs;
             }
         }
-        private ObjectSet<aed> _aeds;
+        private ObjectSet<AED> _AEDs;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<building> buildings
+        {
+            get
+            {
+                if ((_buildings == null))
+                {
+                    _buildings = base.CreateObjectSet<building>("buildings");
+                }
+                return _buildings;
+            }
+        }
+        private ObjectSet<building> _buildings;
 
         #endregion
         #region AddTo Methods
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the aeds EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the AEDs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToaeds(aed aed)
+        public void AddToAEDs(AED aED)
         {
-            base.AddObject("aeds", aed);
+            base.AddObject("AEDs", aED);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the buildings EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTobuildings(building building)
+        {
+            base.AddObject("buildings", building);
         }
 
         #endregion
@@ -103,22 +127,24 @@ namespace AzureAEDFinderWCFServiceWebRole
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="vtrescueModel", Name="aed")]
+    [EdmEntityTypeAttribute(NamespaceName="vtrescueModel", Name="AED")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class aed : EntityObject
+    public partial class AED : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new aed object.
+        /// Create a new AED object.
         /// </summary>
         /// <param name="id">Initial value of the ID property.</param>
-        public static aed Createaed(global::System.Int32 id)
+        /// <param name="pad_expiration">Initial value of the pad_expiration property.</param>
+        public static AED CreateAED(global::System.Int32 id, global::System.DateTime pad_expiration)
         {
-            aed aed = new aed();
-            aed.ID = id;
-            return aed;
+            AED aED = new AED();
+            aED.ID = id;
+            aED.pad_expiration = pad_expiration;
+            return aED;
         }
 
         #endregion
@@ -226,81 +252,9 @@ namespace AzureAEDFinderWCFServiceWebRole
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Double> lat
-        {
-            get
-            {
-                return _lat;
-            }
-            set
-            {
-                OnlatChanging(value);
-                ReportPropertyChanging("lat");
-                _lat = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("lat");
-                OnlatChanged();
-            }
-        }
-        private Nullable<global::System.Double> _lat;
-        partial void OnlatChanging(Nullable<global::System.Double> value);
-        partial void OnlatChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Double> @long
-        {
-            get
-            {
-                return _long;
-            }
-            set
-            {
-                OnlongChanging(value);
-                ReportPropertyChanging("long");
-                _long = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("long");
-                OnlongChanged();
-            }
-        }
-        private Nullable<global::System.Double> _long;
-        partial void OnlongChanging(Nullable<global::System.Double> value);
-        partial void OnlongChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Byte> floor
-        {
-            get
-            {
-                return _floor;
-            }
-            set
-            {
-                OnfloorChanging(value);
-                ReportPropertyChanging("floor");
-                _floor = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("floor");
-                OnfloorChanged();
-            }
-        }
-        private Nullable<global::System.Byte> _floor;
-        partial void OnfloorChanging(Nullable<global::System.Byte> value);
-        partial void OnfloorChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> pad_expiration
+        public global::System.DateTime pad_expiration
         {
             get
             {
@@ -315,8 +269,8 @@ namespace AzureAEDFinderWCFServiceWebRole
                 Onpad_expirationChanged();
             }
         }
-        private Nullable<global::System.DateTime> _pad_expiration;
-        partial void Onpad_expirationChanging(Nullable<global::System.DateTime> value);
+        private global::System.DateTime _pad_expiration;
+        partial void Onpad_expirationChanging(global::System.DateTime value);
         partial void Onpad_expirationChanged();
     
         /// <summary>
@@ -342,6 +296,139 @@ namespace AzureAEDFinderWCFServiceWebRole
         private global::System.String _loc_description;
         partial void Onloc_descriptionChanging(global::System.String value);
         partial void Onloc_descriptionChanged();
+
+        #endregion
+    
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="vtrescueModel", Name="building")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class building : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new building object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        /// <param name="latitude">Initial value of the latitude property.</param>
+        /// <param name="longitude">Initial value of the longitude property.</param>
+        /// <param name="name">Initial value of the name property.</param>
+        public static building Createbuilding(global::System.Int32 id, global::System.Double latitude, global::System.Double longitude, global::System.String name)
+        {
+            building building = new building();
+            building.ID = id;
+            building.latitude = latitude;
+            building.longitude = longitude;
+            building.name = name;
+            return building;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Double latitude
+        {
+            get
+            {
+                return _latitude;
+            }
+            set
+            {
+                OnlatitudeChanging(value);
+                ReportPropertyChanging("latitude");
+                _latitude = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("latitude");
+                OnlatitudeChanged();
+            }
+        }
+        private global::System.Double _latitude;
+        partial void OnlatitudeChanging(global::System.Double value);
+        partial void OnlatitudeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Double longitude
+        {
+            get
+            {
+                return _longitude;
+            }
+            set
+            {
+                OnlongitudeChanging(value);
+                ReportPropertyChanging("longitude");
+                _longitude = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("longitude");
+                OnlongitudeChanged();
+            }
+        }
+        private global::System.Double _longitude;
+        partial void OnlongitudeChanging(global::System.Double value);
+        partial void OnlongitudeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                OnnameChanging(value);
+                ReportPropertyChanging("name");
+                _name = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("name");
+                OnnameChanged();
+            }
+        }
+        private global::System.String _name;
+        partial void OnnameChanging(global::System.String value);
+        partial void OnnameChanged();
 
         #endregion
     

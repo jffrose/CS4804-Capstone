@@ -7,3 +7,12 @@ c:\users\jeff\documents\visual studio 2010\Projects\AzureAEDFinder\WCFServiceWeb
 c:\users\jeff\documents\visual studio 2010\Projects\AzureAEDFinder\WCFServiceWebRole1\obj\Debug\ResolveAssemblyReference.cache
 c:\users\jeff\documents\visual studio 2010\Projects\AzureAEDFinder\WCFServiceWebRole1\obj\Debug\WCFServiceWebRole1.dll
 c:\users\jeff\documents\visual studio 2010\Projects\AzureAEDFinder\WCFServiceWebRole1\obj\Debug\WCFServiceWebRole1.pdb
+C:\Users\Jeff\Documents\Visual Studio 2010\Projects\CS4804-Capstone\AzureAEDFinder\WCFServiceWebRole1\bin\WCFServiceWebRole1.dll
+C:\Users\Jeff\Documents\Visual Studio 2010\Projects\CS4804-Capstone\AzureAEDFinder\WCFServiceWebRole1\bin\WCFServiceWebRole1.pdb
+C:\Users\Jeff\Documents\Visual Studio 2010\Projects\CS4804-Capstone\AzureAEDFinder\WCFServiceWebRole1\bin\Microsoft.WindowsAzure.Diagnostics.dll
+C:\Users\Jeff\Documents\Visual Studio 2010\Projects\CS4804-Capstone\AzureAEDFinder\WCFServiceWebRole1\bin\Microsoft.WindowsAzure.StorageClient.dll
+C:\Users\Jeff\Documents\Visual Studio 2010\Projects\CS4804-Capstone\AzureAEDFinder\WCFServiceWebRole1\bin\Microsoft.WindowsAzure.Diagnostics.xml
+C:\Users\Jeff\Documents\Visual Studio 2010\Projects\CS4804-Capstone\AzureAEDFinder\WCFServiceWebRole1\bin\Microsoft.WindowsAzure.StorageClient.xml
+C:\Users\Jeff\Documents\Visual Studio 2010\Projects\CS4804-Capstone\AzureAEDFinder\WCFServiceWebRole1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jeff\Documents\Visual Studio 2010\Projects\CS4804-Capstone\AzureAEDFinder\WCFServiceWebRole1\obj\Debug\WCFServiceWebRole1.dll
+C:\Users\Jeff\Documents\Visual Studio 2010\Projects\CS4804-Capstone\AzureAEDFinder\WCFServiceWebRole1\obj\Debug\WCFServiceWebRole1.pdb

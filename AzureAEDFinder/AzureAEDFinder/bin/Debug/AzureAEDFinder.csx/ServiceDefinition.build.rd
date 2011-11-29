@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AzureAEDFinder" generation="1" functional="0" release="0" Id="73063e19-faac-4178-a5fd-6866f008648e" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AzureAEDFinder" generation="1" functional="0" release="0" Id="4e8bea2d-2fa8-410b-9d33-563ad415798e" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="AzureAEDFinderGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -72,7 +72,7 @@
       </maps>
       <components>
         <groupHascomponents>
-          <role name="AzureAEDFinderWCFServiceWebRole" generation="1" functional="0" release="0" software="c:\users\jeff\documents\visual studio 2010\Projects\AzureAEDFinder\AzureAEDFinder\bin\Debug\AzureAEDFinder.csx\roles\AzureAEDFinderWCFServiceWebRole" entryPoint="base\x86\WaHostBootstrapper.exe" parameters="base\x86\WaIISHost.exe " memIndex="1792" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
+          <role name="AzureAEDFinderWCFServiceWebRole" generation="1" functional="0" release="0" software="C:\Users\Jeff\Documents\Visual Studio 2010\Projects\CS4804-Capstone\AzureAEDFinder\AzureAEDFinder\bin\Debug\AzureAEDFinder.csx\roles\AzureAEDFinderWCFServiceWebRole" entryPoint="base\x86\WaHostBootstrapper.exe" parameters="base\x86\WaIISHost.exe " memIndex="1792" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
             <componentports>
               <inPort name="Endpoint1" protocol="http" portRanges="80" />
             </componentports>
@@ -102,9 +102,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="6ede6896-95d0-477f-a38e-728b2d861935" ref="Microsoft.RedDog.Contract\ServiceContract\AzureAEDFinderContract@ServiceDefinition.build">
+    <implementation Id="b4884add-af08-4457-89b7-e3822ba1fc13" ref="Microsoft.RedDog.Contract\ServiceContract\AzureAEDFinderContract@ServiceDefinition.build">
       <interfacereferences>
-        <interfaceReference Id="33aa79e6-cef1-463e-b6f5-d5da95775a19" ref="Microsoft.RedDog.Contract\Interface\AzureAEDFinderWCFServiceWebRole:Endpoint1@ServiceDefinition.build">
+        <interfaceReference Id="c0d480b9-d557-43b7-a312-1cb111777a73" ref="Microsoft.RedDog.Contract\Interface\AzureAEDFinderWCFServiceWebRole:Endpoint1@ServiceDefinition.build">
           <inPort>
             <inPortMoniker name="/AzureAEDFinder/AzureAEDFinderGroup/AzureAEDFinderWCFServiceWebRole:Endpoint1" />
           </inPort>

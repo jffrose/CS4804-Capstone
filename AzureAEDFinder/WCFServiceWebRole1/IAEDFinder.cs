@@ -20,7 +20,35 @@ namespace AzureAEDFinderWCFServiceWebRole
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         [OperationContract]
-        List<aed> GetAllAEDs();
+        List<AED> GetAllAEDs();
+
+        [OperationContract]
+        building GetClosestBuilding(Coordinate coord);
+
+        [OperationContract]
+        List<Coordinate> GetWalkingDirections(Coordinate coord);
+
+        [OperationContract]
+        List<AED> GetClosestAEDs(Coordinate coord);
+    }
+
+    [DataContract]
+    public class Coordinate
+    {
+        double longitude, latitude;
+        [DataMember]
+        public double Longitude
+        {
+            get { return longitude; }
+            set { longitude = value; }
+        }
+        [DataMember]
+        public double Latitude
+        {
+            get { return latitude; }
+            set { latitude = value; }
+        }
+    
     }
 
 

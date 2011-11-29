@@ -28,19 +28,19 @@
     <Property name="ProjectName" value="AzureAEDFinderWCFServiceWebRole" />
     <Property name="Configuration" value="Release" />
     <Property name="Platform" value="AnyCPU" />
-    <Property name="OutputDir" value="c:\users\jeff\documents\visual studio 2010\Projects\AzureAEDFinder\AzureAEDFinder\obj\Release\AzureAEDFinderWCFServiceWebRole\" />
+    <Property name="OutputDir" value="C:\Users\Jeff\Documents\Visual Studio 2010\Projects\CS4804-Capstone\AzureAEDFinder\AzureAEDFinder\obj\Release\AzureAEDFinderWCFServiceWebRole\" />
     <Property name="EntryPoint" value="WCFServiceWebRole1.dll" />
-    <Property name="SourceDir" value="c:\users\jeff\documents\visual studio 2010\Projects\AzureAEDFinder\WCFServiceWebRole1\" />
+    <Property name="SourceDir" value="C:\Users\Jeff\Documents\Visual Studio 2010\Projects\CS4804-Capstone\AzureAEDFinder\WCFServiceWebRole1\" />
     <Property name="RoleTargetFramework" value="v4.0" />
-    <Property name="SitePhysicalPath" value="c:\users\jeff\documents\visual studio 2010\Projects\AzureAEDFinder\AzureAEDFinder\obj\Release\AzureAEDFinderWCFServiceWebRole\" />
-    <Property name="OriginalItemSpec" value="c:\users\jeff\documents\visual studio 2010\Projects\AzureAEDFinder\AzureAEDFinder\AzureAEDFinder.ccproj" />
-    <Property name="MSBuildSourceProjectFile" value="c:\users\jeff\documents\visual studio 2010\Projects\AzureAEDFinder\AzureAEDFinder\AzureAEDFinder.ccproj" />
+    <Property name="SitePhysicalPath" value="C:\Users\Jeff\Documents\Visual Studio 2010\Projects\CS4804-Capstone\AzureAEDFinder\AzureAEDFinder\obj\Release\AzureAEDFinderWCFServiceWebRole\" />
+    <Property name="OriginalItemSpec" value="C:\Users\Jeff\Documents\Visual Studio 2010\Projects\CS4804-Capstone\AzureAEDFinder\AzureAEDFinder\AzureAEDFinder.ccproj" />
+    <Property name="MSBuildSourceProjectFile" value="C:\Users\Jeff\Documents\Visual Studio 2010\Projects\CS4804-Capstone\AzureAEDFinder\AzureAEDFinder\AzureAEDFinder.ccproj" />
     <Property name="MSBuildSourceTargetName" value="ResolveSingleWebRoleReference" />
     <Property name="TargetFrameworkVersion" value="v4.0" />
     <Property name="TargetRuntimeVersion" value="v4.0" />
   </Properties>
   <Sites>
-    <Site name="Web" physicalDirectory="c:\users\jeff\documents\visual studio 2010\Projects\AzureAEDFinder\AzureAEDFinder\obj\Release\AzureAEDFinderWCFServiceWebRole\">
+    <Site name="Web" physicalDirectory="C:\Users\Jeff\Documents\Visual Studio 2010\Projects\CS4804-Capstone\AzureAEDFinder\AzureAEDFinder\obj\Release\AzureAEDFinderWCFServiceWebRole\">
       <Bindings>
         <Binding name="Endpoint1" endpointName="Endpoint1" />
       </Bindings>
